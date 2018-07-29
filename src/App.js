@@ -4,6 +4,7 @@ import './App.css';
 
 import Intro from './Intro.js';
 import Honors from './Honors.js';
+import Contact from './Contact.js';
 import { CreateMarkup } from './utils/Generic';
 import SocialRow from './components/SocialRow';
 
@@ -43,6 +44,9 @@ class App extends Component {
 	      </div>
 	      <div className="App-honors">
 		<Honors />
+	      </div>
+	      <div className="App-contact">
+		<Contact />
 	      </div>
 	    </div>
 	);

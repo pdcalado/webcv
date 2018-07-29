@@ -10,7 +10,7 @@
     overflow: hidden;
     margin: 0;
     padding: 0;
-    padding-bottom: 1.0em;
+    padding-bottom: 1.5em;
 }
 
 .Honors-title ul li {
@@ -22,7 +22,7 @@
 
 .Honors-container {
     padding-top: 1.0em;
-    padding-bottom: 1.0em;
+    padding-bottom: 3.0em;
     padding-left: 0em;
     border: none;
     background-color: var(--main-grey);

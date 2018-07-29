@@ -58,5 +58,10 @@ export default {
 		link: "https://ieeexplore.ieee.org"
 	    }
 	]
+    },
+    contact: {
+	message: "You can find the source code for this webiste at <a href=\"https://github.com/pdcalado/webcv\">webcv</a>.",
+	policy: "This website does not use cookies or gather any sort of information from it's visitors.",
+	copy: "&copy; 2018 Pedro Calado - all rights reserved."
     }
 }

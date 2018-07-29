@@ -1,0 +1,31 @@
+.Contact-title {
+    font-size: 2.0em;
+    font-weight: bold;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+}
+
+.Contact-title ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1.0em;
+}
+
+.Contact-title ul li {
+    float: left;
+    margin-left: 0px;
+    padding-left: 0.8em;
+    list-style-type: none;
+}
+
+.Contact-container {
+    padding-top: 3.0em;
+    padding-bottom: 1.0em;
+    padding-left: 0em;
+    border: none;
+    text-align: center;
+    font-size: 0.5em;
+    background-color: var(--main-white);
+}
