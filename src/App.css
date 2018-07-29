@@ -1,0 +1,77 @@
+:root {
+    --main-dark: #222;
+    --main-blue: #5096D8;
+    --main-grey: #7F8B94;
+}
+
+.App-header {
+    background-color: var(--main-dark);
+    height: auto;
+    padding: 1.5em;
+    padding-left: 2.5em;
+    color: white;
+    width: 100%;
+}
+
+.App-title {
+    font-size: 2.5em;
+    text-align: left;
+    font-weight: bold;
+    line-height: 1.0em;
+}
+
+.App-expertise {
+    color: var(--main-blue);
+    font-size: 1.0em;
+    text-align: left;
+    white-space: pre-line;
+}
+
+.App-expertise .markup strong {
+    white-space: nowrap;
+}
+
+.App-social {
+    font-size: 2.0em;
+}
+
+.App-social ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.App-social ul li {
+    float: left;
+    margin-left: 0px;
+    padding-left: 0.8em;
+    list-style-type: none;
+}
+
+.App-social ul li a {
+    color: var(--main-grey);
+}
+
+.App-social ul li a:active {
+    color: var(--main-blue);
+}
+
+.App-social ul li a:hover {
+    color: var(--main-blue);
+}
+
+.App-social ul li:first-child {
+    padding-left: 0px;
+}
+
+.App-intro {
+    font-size: medium;
+    background-color: white;
+}
+
+.App-honors {
+    font-size: medium;
+    background-color: var(--main-grey);
+    color: white;
+    width: 100%;
+}

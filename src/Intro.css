@@ -1,0 +1,38 @@
+.Intro-col {
+    height: 100vh;
+}
+
+.Intro-col .card {
+    border: none;
+    background-color: inherit;
+}
+
+.Intro-col .card-text {
+    text-align: left;
+    margin-top: 2.0em;
+    background-color: inherit;
+}
+
+.Intro-col .card-title {
+    font-size: 2.0em;
+    font-weight: bold;
+    text-align: center;
+    color: var(--main-blue);
+}
+
+.Intro-col .card-title ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.Intro-col .card-title ul li {
+    float: left;
+    margin-left: 0px;
+    padding-left: 0.8em;
+    list-style-type: none;
+}
+
+.Intro-col .card-title ul li:first-child {
+    padding-left: 0px;
+}

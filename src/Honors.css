@@ -1,0 +1,74 @@
+.Honors-title {
+    font-size: 2.0em;
+    font-weight: bold;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+}
+
+.Honors-title ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1.0em;
+}
+
+.Honors-title ul li {
+    float: left;
+    margin-left: 0px;
+    padding-left: 0.8em;
+    list-style-type: none;
+}
+
+.Honors-container {
+    padding-top: 1.0em;
+    padding-bottom: 1.0em;
+    padding-left: 0em;
+    border: none;
+    background-color: var(--main-grey);
+}
+
+.Honors-link a {
+    color: white;
+    text-decoration: underline;
+}
+
+.Honors-link a:visited {
+    color: white;
+    text-decoration: underline;
+}
+
+.Honors-subtitle {
+    font-size: 1.0em;
+    font-weight: bold;
+    text-align: left;
+    color: white;
+    padding: 0.5em;
+}
+
+.Honors-card {
+    height: 9em;
+}
+
+.Honors-cardtext {
+    font-size: 0.8em;
+    text-align: left;
+    color: white;
+    float: bottom;
+    padding: 0.5em;
+}
+
+.Honors-cardbody {
+    font-size: 0.8em;
+    text-align: left;
+    color: white;
+}
+
+.Honors-desc {
+    text-align: center;
+}
+
+.Honors-subdesc {
+    text-align: center;
+    font-size: 0.8em;
+}
