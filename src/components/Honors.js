@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Row, Col, Container } from 'reactstrap';
 
 import './Honors.css';
-import { fancyTitle } from './utils/Generic';
+import { fancyTitle } from 'utils/Generic';
 import { faAward as honorIcon } from '@fortawesome/free-solid-svg-icons';
 
-import Data from './data.js';
+import Data from 'data.js';
 
 class Honors extends Component {
     render() {

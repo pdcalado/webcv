@@ -1,11 +1,7 @@
 import React from 'react';
 import { Timeline, TimelineEvent } from 'react-event-timeline';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faBriefcase,
-    faGraduationCap
-}
-from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
 var style = window.getComputedStyle(document.body);
 var colorExpertise = style.getPropertyValue('--main-blue');

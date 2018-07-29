@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { Row, Col, Container } from 'reactstrap';
 import './App.css';
 
-import Intro from './Intro.js';
-import Honors from './Honors.js';
-import Contact from './Contact.js';
-import { CreateMarkup } from './utils/Generic';
-import SocialRow from './components/SocialRow';
+import Intro from 'components/Intro.js';
+import Honors from 'components/Honors.js';
+import Contact from 'components/Contact.js';
+import { CreateMarkup } from 'utils/Generic';
+import SocialRow from 'components/SocialRow';
 
-import Data from './data.js';
+import Data from 'data.js';
 
 class App extends Component {
     render() {

@@ -11,9 +11,9 @@ from 'reactstrap';
 import { faUserTie } from '@fortawesome/free-solid-svg-icons';
 
 import './Intro.css';
-import { CreateMarkup, fancyTitle } from './utils/Generic';
-import Timeline from './components/Timeline';
-import Data from './data.js';
+import { CreateMarkup, fancyTitle } from 'utils/Generic';
+import Timeline from 'components/Timeline';
+import Data from 'data.js';
 
 const IntroColumn = (title, Comp, props) => {
     return (

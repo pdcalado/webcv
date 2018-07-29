@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 
 import './Contact.css';
-import { CreateMarkup } from './utils/Generic';
+import { CreateMarkup } from 'utils/Generic';
 
-import Data from './data.js';
+import Data from 'data.js';
 
 class Contact extends Component {
     render() {
