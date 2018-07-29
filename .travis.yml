@@ -8,5 +8,6 @@ cache:
     - node_modules
 
 script:
+  - cp .pseudo-data.js src/data.js
   - npm test
   - npm run build
