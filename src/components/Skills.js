@@ -12,15 +12,27 @@ import moment from 'moment';
 
 import './Skills.css';
 import Data from 'data.js';
+import { colorLighter, colorTitle } from 'style.js';
 
 const skillRow = (key, obj) => {
     const name = (obj) => {
 	if (!obj.date)
-	    return obj.name;
+	    return (<span>{obj.name}</span>);
 
 	const age = moment.duration(moment().diff(moment(obj.date))).asYears();
-	return obj.name + ' (' + age.toFixed() + ' yrs)';
+	return (
+	    <div>
+	      <span>
+		{obj.name + ' '}
+	      </span>
+	      <span className="Skills-age">
+		{'(' + age.toFixed() + ' yrs)'}
+	      </span>
+	    </div>
+	);
     };
+
+    const pbstyle = { backgroundColor: colorLighter };
 
     return (
 	<Row key={key} className="mb-2">
@@ -28,7 +40,7 @@ const skillRow = (key, obj) => {
 	    {name(obj)}
 	  </Col>
 	  <Col xs="6">
-	    <Progress striped color="info" value={obj.value} />
+	    <Progress striped style={pbstyle} value={obj.value} />
 	  </Col>
 	</Row>
     );

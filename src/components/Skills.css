@@ -60,3 +60,14 @@
     font-weight: bold;
     overflow-wrap: normal;
 }
+
+.Skills-progress {
+    color: var(--main-dark);
+    backgroundColor: var(--main-white);
+}
+
+.Skills-age {
+    color: var(--main-grey);
+    font-weight: light;
+    font-size: 0.8em;
+}

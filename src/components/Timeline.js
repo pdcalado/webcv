@@ -2,9 +2,7 @@ import React from 'react';
 import { Timeline, TimelineEvent } from 'react-event-timeline';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
-
-var style = window.getComputedStyle(document.body);
-var colorExpertise = style.getPropertyValue('--main-blue');
+import { colorTitle } from 'style.js';
 
 const TimelineCareer = ({stages}) => {
     const itemList = stages.map((item, index) => {
@@ -24,7 +22,7 @@ const TimelineCareer = ({stages}) => {
 
 	const chsty = {
 	    background: 'none',
-	    color: colorExpertise,
+	    color: colorTitle,
 	    margin: 0,
 	    padding: 0
 	};
@@ -49,7 +47,7 @@ const TimelineCareer = ({stages}) => {
 	      titleStyle={tsty}
 	      subtitle={item.dates}
 	      icon={<FontAwesomeIcon icon={icon}/>}
-	      iconColor={colorExpertise}
+	      iconColor={colorTitle}
 	      container="card"
 	      style={csty}
 	      cardHeaderStyle={chsty}
@@ -62,7 +60,7 @@ const TimelineCareer = ({stages}) => {
     });
 
     return (
-	<Timeline lineColor={colorExpertise}>
+	<Timeline lineColor={colorTitle}>
 	  {itemList}
 	</Timeline>
     );
