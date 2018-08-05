@@ -48,7 +48,7 @@ class Intro extends Component {
 	      }
 	      {
 		  IntroColumn(fancyTitle(career.title, faUserTie),
-			    Timeline, {stages: career.stages})
+			      Timeline, {stages: career.stages})
 	      }
 	    </Row>
 	);
