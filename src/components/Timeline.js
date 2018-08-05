@@ -36,6 +36,12 @@ const TimelineCareer = ({stages}) => {
 	    padding: 0
 	};
 
+	const role = (item) => {
+	    if (item.role)
+		return (<div>{item.role} <br /></div>);
+	    return null;
+	};
+
 	return (
 	    <TimelineEvent
 	      key={"tevent-" + index}
@@ -49,6 +55,7 @@ const TimelineCareer = ({stages}) => {
 	      cardHeaderStyle={chsty}
 	      contentStyle={cntsty}
 	      >
+	      {role(item)}
 	      {item.location}
 	    </TimelineEvent>
 	);
