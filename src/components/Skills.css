@@ -1,0 +1,62 @@
+.Skills-col .card {
+    border: none;
+    background-color: inherit;
+}
+
+.Skills-col .card-text {
+    text-align: left;
+    margin-top: 2.0em;
+    background-color: inherit;
+}
+
+.Skills-col .card-title {
+    font-size: 2.0em;
+    font-weight: bold;
+    text-align: center;
+    color: var(--main-blue);
+    display: flex;
+    justify-content: center;
+    margin-top: 2.0em;
+}
+
+.Skills-col .card-title ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.Skills-col .card-title ul li {
+    float: left;
+    margin-left: 0px;
+    padding-left: 0.8em;
+    list-style-type: none;
+}
+
+.Skills-col .card-title ul li:first-child {
+    padding-left: 0px;
+
+}
+
+.Skills-sub {
+    height: 100vh;
+}
+
+.Skills-sub .card {
+    border: none;
+    border-color: var(--main-grey);
+}
+
+.Skills-sub .card .card-title {
+    font-size: 1.5em;
+}
+
+.Skills-gauge {
+    text-align: center;
+}
+
+.Skills-name {
+    color: var(--main-blue);
+    font-size: 1.5em;
+    font-weight: bold;
+    overflow-wrap: normal;
+}

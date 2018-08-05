@@ -3,6 +3,7 @@ import { Row, Col, Container } from 'reactstrap';
 import './App.css';
 
 import Intro from 'components/Intro.js';
+import Skills from 'components/Skills.js';
 import Honors from 'components/Honors.js';
 import Contact from 'components/Contact.js';
 import { CreateMarkup } from 'utils/Generic';
@@ -41,6 +42,9 @@ class App extends Component {
 		<Container className="App-intro mt-4">
 		  <Intro />
 		</Container>
+	      </div>
+	      <div className="App-skills">
+		<Skills />
 	      </div>
 	      <div className="App-honors">
 		<Honors />
