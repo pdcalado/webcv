@@ -13,32 +13,6 @@ import moment from 'moment';
 import './Skills.css';
 import Data from 'data.js';
 
-// const renderSkill = (obj) => {
-//     const age = moment.duration(moment().diff(moment(obj.date))).asYears();
-//     // const text = (age.toFixed() + ' yrs');
-//     const text = obj.name;
-
-//     const styles = {
-// 	text: { fontSize: '20px',
-// 		justify: "inter-word",
-// 		align: 'center'	}
-//     };
-
-//     const skillName = (name) => {
-// 	return null;
-// 	return (<span className="Skills-name">{obj.name}</span>);
-//     };
-
-//     return (
-// 	<div className="Skills-gauge">
-// 	  {skillName(obj.name)}
-// 	  <CircularProgressbar initialAnimation={true} strokeWidth={10}
-// 			       percentage={obj.value} text={text}
-// 			       styles={styles}/>
-// 	</div>
-//     );
-// };
-
 const skillRow = (key, obj) => {
     const name = (obj) => {
 	if (!obj.date)
@@ -49,7 +23,7 @@ const skillRow = (key, obj) => {
     };
 
     return (
-	<Row key={key}>
+	<Row key={key} className="mb-2">
 	  <Col xs="6">
 	    {name(obj)}
 	  </Col>
