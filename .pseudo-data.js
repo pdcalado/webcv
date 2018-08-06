@@ -59,6 +59,81 @@ export default {
 	    }
 	]
     },
+    skills: {
+	title: "Skills",
+	programming: {
+	    title: "Programming Skills",
+	    list: [
+		{
+		    name: "Golang",
+		    value: 10,
+		    date: "2018-01"
+		},
+		{
+		    name: "Python",
+		    value: 20,
+		    date: "2018-01"
+		},
+		{
+		    name: "C",
+		    value: 30,
+		    date: "2018-01"
+		},
+		{
+		    name: "C++",
+		    value: 40,
+		    date: "2018-01"
+		}
+	    ]
+	},
+	tools: {
+	    title: "Tools Proficiency",
+	    list: [
+		{
+		    name: "Linux",
+		    value: 60,
+		    date: "2017-01"
+		},
+		{
+		    name: "Git",
+		    value: 60,
+		    date: "2017-01"
+		},
+		{
+		    name: "Docker",
+		    value: 60,
+		    date: "2017-01"
+		},
+		{
+		    name: "Ansible",
+		    value: 60,
+		    date: "2017-01"
+		},
+		{
+		    name: "ZeroMQ",
+		    value: 60,
+		    date: "2017-01"
+		}
+	    ]
+	},
+	languages: {
+	    title: "Languages Spoken",
+	    list: [
+		{
+		    name: "English",
+		    value: 90
+		},
+		{
+		    name: "French",
+		    value: 100
+		},
+		{
+		    name: "Japanese",
+		    value: 50
+		}
+	    ]
+	}
+    },
     contact: {
 	message: "You can find the source code for this webiste at <a href=\"https://github.com/pdcalado/webcv\">webcv</a>.",
 	policy: "This website does not use cookies or gather any sort of information from it's visitors.",
