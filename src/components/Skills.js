@@ -9,20 +9,26 @@ import {
 }
 from 'reactstrap';
 import moment from 'moment';
-
 import './Skills.css';
+
+import { CreateMarkup } from 'utils/Generic';
+
 import Data from 'data.js';
-import { colorLighter, colorTitle } from 'style.js';
+import { colorLighter } from 'style.js';
 
 const skillRow = (key, obj) => {
     const name = (obj) => {
 	if (!obj.date)
-	    return (<span>{obj.name}</span>);
+	    return (
+		<span className="Skills-name">
+		  {obj.name}
+		</span>
+	    );
 
 	const age = moment.duration(moment().diff(moment(obj.date))).asYears();
 	return (
 	    <div>
-	      <span>
+	      <span className="Skills-name">
 		{obj.name + ' '}
 	      </span>
 	      <span className="Skills-age">
@@ -35,7 +41,7 @@ const skillRow = (key, obj) => {
     const pbstyle = { backgroundColor: colorLighter };
 
     return (
-	<Row key={key} className="mb-2">
+	<Row key={key} className="Skills-row mb-2">
 	  <Col xs="6">
 	    {name(obj)}
 	  </Col>
@@ -56,6 +62,9 @@ const skillCard = (obj) => {
 	  <CardTitle>{obj.title}</CardTitle>
 	  <CardBody>
 	    {rows}
+	    <Row className="Skills-desc mt-5">
+	      <CreateMarkup innerHtml={obj.description} />
+	    </Row>
 	  </CardBody>
 	</Card>
     );
@@ -64,8 +73,6 @@ const skillCard = (obj) => {
 class Skills extends Component {
     render() {
 	const { skills } = Data;
-
-	// <CardTitle>{fancyTitle(skills.title, faCogs)}</CardTitle>
 
 	return (
 	    <Row>

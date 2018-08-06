@@ -3,12 +3,6 @@
     background-color: inherit;
 }
 
-.Skills-col .card-text {
-    text-align: left;
-    margin-top: 2.0em;
-    background-color: inherit;
-}
-
 .Skills-col .card-title {
     font-size: 2.0em;
     font-weight: bold;
@@ -17,24 +11,6 @@
     display: flex;
     justify-content: center;
     margin-top: 2.0em;
-}
-
-.Skills-col .card-title ul {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-.Skills-col .card-title ul li {
-    float: left;
-    margin-left: 0px;
-    padding-left: 0.8em;
-    list-style-type: none;
-}
-
-.Skills-col .card-title ul li:first-child {
-    padding-left: 0px;
-
 }
 
 .Skills-sub {
@@ -50,24 +26,27 @@
     font-size: 1.5em;
 }
 
-.Skills-gauge {
-    text-align: center;
+.Skills-row {
+    display: table;
+    vertical-align: middle;
 }
 
 .Skills-name {
-    color: var(--main-blue);
-    font-size: 1.5em;
-    font-weight: bold;
-    overflow-wrap: normal;
-}
-
-.Skills-progress {
-    color: var(--main-dark);
-    backgroundColor: var(--main-white);
+    font-size: 0.9em;
+    vertical-align: middle;
+    line-height: 1.0em;
+    white-space: nowrap;
+    display: table-cell;
 }
 
 .Skills-age {
     color: var(--main-grey);
-    font-weight: light;
     font-size: 0.8em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: table-cell;
+}
+
+.Skills-desc {
+    font-size: 0.9em;
 }
