@@ -21,6 +21,8 @@ class App extends Component {
 	    contact
 	} = this.props.data;
 
+	document.title = owner.name + ' Web CV';
+
         return (
             <div>
               <div className="App-header">
