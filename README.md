@@ -21,7 +21,7 @@ File structure is inspired by [Fractal](https://hackernoon.com/fractal-a-react-a
 
 * Add a file called data.js in `src/` and fill it with the same keys as [.pseudo-data.js](.pseudo-data.js)
 * Add a favicon.ico to `public/`
-* Build with `npm run build` and serve the build folder
+* Build with `npm build` and serve the build folder
 
 ## License
 
