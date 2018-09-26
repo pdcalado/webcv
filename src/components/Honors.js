@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { Row, Col, Container } from 'reactstrap';
+import PropTypes from 'prop-types';
 
 import './Honors.css';
 import { fancyTitle } from 'utils/Generic';
 import { faAward as honorIcon } from '@fortawesome/free-solid-svg-icons';
 
-import Data from 'data.js';
-
 class Honors extends Component {
     render() {
-	const { honors } = Data;
+	const { honors } = this.props;
 
 	const itemList = honors.list.map((item, index) => {
 	    const titleDecor = (title, link) => {
@@ -53,5 +52,9 @@ class Honors extends Component {
 	);
     }
 }
+
+Honors.propTypes = {
+    honors: PropTypes.object.isRequired
+};
 
 export default Honors;

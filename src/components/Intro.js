@@ -56,8 +56,8 @@ class Intro extends Component {
 }
 
 Intro.propTypes = {
-    about: PropTypes.object,
-    career: PropTypes.object
+    about: PropTypes.object.isRequired,
+    career: PropTypes.object.isRequired
 };
 
 export default Intro;

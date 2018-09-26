@@ -8,12 +8,11 @@ import {
     Row,
 }
 from 'reactstrap';
+import PropTypes from 'prop-types';
 import moment from 'moment';
 import './Skills.css';
 
 import { CreateMarkup } from 'utils/Generic';
-
-import Data from 'data.js';
 import { colorLighter } from 'style.js';
 
 const skillRow = (key, obj) => {
@@ -72,7 +71,7 @@ const skillCard = (obj) => {
 
 class Skills extends Component {
     render() {
-	const { skills } = Data;
+	const { skills } = this.props;
 
 	return (
 	    <Row>
@@ -97,5 +96,9 @@ class Skills extends Component {
 	);
     }
 }
+
+Skills.propTypes = {
+    skills: PropTypes.object
+};
 
 export default Skills;

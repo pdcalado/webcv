@@ -44,13 +44,13 @@ class App extends Component {
                 </Container>
               </div>
               <div className="App-skills">
-                <Skills />
+                <Skills skills={Data.skills} />
               </div>
               <div className="App-honors">
-                <Honors />
+                <Honors honors={Data.honors} />
               </div>
               <div className="App-contact">
-                <Contact />
+                <Contact contact={Data.contact} />
               </div>
             </div>
         );

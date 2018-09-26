@@ -38,5 +38,4 @@ SocialRow.propTypes = {
     social: PropTypes.object.isRequired
 };
 
-
 export default SocialRow;

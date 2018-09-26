@@ -2,6 +2,7 @@ import React from 'react';
 import { Timeline, TimelineEvent } from 'react-event-timeline';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 import { colorTitle } from 'style.js';
 
 const TimelineCareer = ({stages}) => {
@@ -66,6 +67,8 @@ const TimelineCareer = ({stages}) => {
     );
 };
 
-
+TimelineCareer.propTypes = {
+    stages: PropTypes.array.isRequired
+};
 
 export default TimelineCareer;
