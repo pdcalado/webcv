@@ -1,4 +1,4 @@
-# Web CV [![Build Status](https://api.travis-ci.org/pdcalado/webcv.svg?branch=master)](https://travis-ci.org/pdcalado/webcv) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2d321ff43b6c4047a1229f1d0dea794a)](https://www.codacy.com/app/pdcalado/webcv?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pdcalado/webcv&amp;utm_campaign=Badge_Grade)
+# Web CV [![Build Status](https://travis-ci.org/pdcalado/webcv.svg?branch=master)](https://travis-ci.org/pdcalado/webcv) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2d321ff43b6c4047a1229f1d0dea794a)](https://www.codacy.com/app/pdcalado/webcv?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pdcalado/webcv&amp;utm_campaign=Badge_Grade)
 
 This is the source code of my cv webpage.
 
