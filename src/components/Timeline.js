@@ -43,13 +43,13 @@ const TimelineCareer = ({stages}) => {
 
         return (
             <TimelineEvent
-              key={"tevent-" + index}
+              key={'tevent-' + index}
               title={item.entity}
               titleStyle={tsty}
               subtitle={item.dates}
               icon={<FontAwesomeIcon icon={icon}/>}
               iconColor={colorTitle}
-              container="card"
+              container='card'
               style={csty}
               cardHeaderStyle={chsty}
               contentStyle={cntsty}

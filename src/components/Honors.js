@@ -12,8 +12,10 @@ class Honors extends Component {
 
         const itemList = honors.list.map((item, index) => {
             const titleDecor = (title, link) => {
-                if (!link)
+                if (!link) {
                     return (<strong>{title}</strong>);
+		}
+
                 return (
                     <strong className="Honors-link">
                       <a href={link}>{title}</a>

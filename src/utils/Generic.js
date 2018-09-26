@@ -18,8 +18,10 @@ CreateMarkup.propTypes = {
 // Create a fancy title with an icon right next to it
 export const fancyTitle = (text, icon) => {
     const ricon = (obj) => {
-        if (!obj)
+        if (!obj) {
             return null;
+	}
+
         return (
           <li>
             <span>
