@@ -9,7 +9,9 @@ import { colorLighter } from 'style.js';
 
 const skillRow = (key, obj) => {
     const name = (obj) => {
-        if (!obj.date) return <span className="Skills-name">{obj.name}</span>;
+        if (!obj.date) {
+            return <span className="Skills-name">{obj.name}</span>;
+        }
 
         const age = moment.duration(moment().diff(moment(obj.date))).asYears();
         return (

@@ -37,12 +37,14 @@ const TimelineCareer = ({ stages }) => {
         };
 
         const role = (item) => {
-            if (item.role)
+            if (item.role) {
                 return (
                     <div>
                         {item.role} <br />
                     </div>
                 );
+            }
+
             return null;
         };
 
