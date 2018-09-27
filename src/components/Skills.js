@@ -74,8 +74,7 @@ class Skills extends Component {
         const { skills } = this.props;
 
         return (
-            <Row>
-              <Col className="Skills-col">
+              <div className="Skills-col">
                 <Card>
                   <CardBody>
                     <Row>
@@ -91,8 +90,7 @@ class Skills extends Component {
                     </Row>
                   </CardBody>
                 </Card>
-              </Col>
-            </Row>
+              </div>
         );
     }
 }
