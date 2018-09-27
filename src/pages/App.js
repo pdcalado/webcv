@@ -13,15 +13,15 @@ import './App.css';
 class App extends Component {
     render() {
         const {
-	    owner,
-	    about,
-	    career,
-	    skills,
-	    honors,
-	    contact
-	} = this.props.data;
+            owner,
+            about,
+            career,
+            skills,
+            honors,
+            contact
+        } = this.props.data;
 
-	document.title = owner.name + ' Web CV';
+        document.title = owner.name + ' Web CV';
 
         return (
             <div>
