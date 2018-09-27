@@ -25,41 +25,39 @@ class App extends Component {
 
         return (
             <div>
-              <div className="App-header">
-                <Row>
-                  <Col>
-                    <p className="App-title">
-                      {owner.name}
-                    </p>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col>
-                    <p className="App-expertise mt-2">
-                      <CreateMarkup innerHtml={owner.title} />
-                    </p>
-                  </Col>
-                </Row>
-                <Row className="App-social mt-3">
-                  <Col>
-                    <SocialRow social={owner.social} />
-                  </Col>
-                </Row>
-              </div>
-              <div>
-                <Container className="App-intro mt-4">
-                  <Intro about={about} career={career} />
-                </Container>
-              </div>
-              <div className="App-skills">
-                <Skills skills={skills} />
-              </div>
-              <div className="App-honors">
-                <Honors honors={honors} />
-              </div>
-              <div className="App-contact">
-                <Contact contact={contact} />
-              </div>
+                <div className="App-header">
+                    <Row>
+                        <Col>
+                            <p className="App-title">{owner.name}</p>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <p className="App-expertise mt-2">
+                                <CreateMarkup innerHtml={owner.title} />
+                            </p>
+                        </Col>
+                    </Row>
+                    <Row className="App-social mt-3">
+                        <Col>
+                            <SocialRow social={owner.social} />
+                        </Col>
+                    </Row>
+                </div>
+                <div>
+                    <Container className="App-intro mt-4">
+                        <Intro about={about} career={career} />
+                    </Container>
+                </div>
+                <div className="App-skills">
+                    <Skills skills={skills} />
+                </div>
+                <div className="App-honors">
+                    <Honors honors={honors} />
+                </div>
+                <div className="App-contact">
+                    <Contact contact={contact} />
+                </div>
             </div>
         );
     }

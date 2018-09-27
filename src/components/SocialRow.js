@@ -2,12 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin,
-         faGithub,
-         faFacebook,
-         faMedium } from '@fortawesome/free-brands-svg-icons';
+import {
+    faLinkedin,
+    faGithub,
+    faFacebook,
+    faMedium
+} from '@fortawesome/free-brands-svg-icons';
 
-const SocialRow = ({social}) => {
+const SocialRow = ({ social }) => {
     const icons = {
         linkedin: faLinkedin,
         github: faGithub,
@@ -15,23 +17,19 @@ const SocialRow = ({social}) => {
         medium: faMedium
     };
 
-    const list = Object.keys(social).map(key => {
+    const list = Object.keys(social).map((key) => {
         return (
             <li key={key}>
-              <span>
-                <a href={social[key]}>
-                  <FontAwesomeIcon icon={icons[key]} />
-                </a>
-              </span>
+                <span>
+                    <a href={social[key]}>
+                        <FontAwesomeIcon icon={icons[key]} />
+                    </a>
+                </span>
             </li>
         );
     });
 
-    return (
-        <ul>
-          {list}
-        </ul>
-    );
+    return <ul>{list}</ul>;
 };
 
 SocialRow.propTypes = {

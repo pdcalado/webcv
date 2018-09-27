@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // CreateMarkup utility for inserting text as html
-export const CreateMarkup = ({innerHtml}) => { 
+export const CreateMarkup = ({ innerHtml }) => {
     return (
-        <span className="markup"
-              dangerouslySetInnerHTML={{__html: innerHtml}}>
-        </span>
+        <span
+            className="markup"
+            dangerouslySetInnerHTML={{ __html: innerHtml }}
+        />
     );
 };
 
@@ -20,23 +21,21 @@ export const fancyTitle = (text, icon) => {
     const ricon = (obj) => {
         if (!obj) {
             return null;
-	}
+        }
 
         return (
-          <li>
-            <span>
-              <FontAwesomeIcon icon={obj} />
-            </span>
-          </li>
+            <li>
+                <span>
+                    <FontAwesomeIcon icon={obj} />
+                </span>
+            </li>
         );
     };
 
     return (
         <ul>
-          <li>
-            {text}
-          </li>
-          {ricon(icon)}
+            <li>{text}</li>
+            {ricon(icon)}
         </ul>
     );
 };

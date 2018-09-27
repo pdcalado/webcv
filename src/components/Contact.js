@@ -11,12 +11,15 @@ class Contact extends Component {
 
         return (
             <Container className="Contact-container">
-              <CreateMarkup innerHtml={contact.message} />
-              <br /><br />
-              <CreateMarkup innerHtml={contact.policy} />
-              <br /><br />
-              <CreateMarkup innerHtml={contact.copy} />
-              <br /><br />
+                <CreateMarkup innerHtml={contact.message} />
+                <br />
+                <br />
+                <CreateMarkup innerHtml={contact.policy} />
+                <br />
+                <br />
+                <CreateMarkup innerHtml={contact.copy} />
+                <br />
+                <br />
             </Container>
         );
     }
