@@ -17,6 +17,7 @@
     "react-dom": "^16.4.1",
     "react-event-timeline": "^1.5.4",
     "react-scripts": "1.1.4",
+    "react-scroll": "^1.7.10",
     "reactstrap": "^6.3.0"
   },
   "scripts": {
