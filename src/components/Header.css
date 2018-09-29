@@ -1,0 +1,50 @@
+.Header-title {
+    font-size: 2.5em;
+    text-align: left;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.Header-expertise {
+    color: var(--main-blue);
+    font-size: 1em;
+    text-align: left;
+    white-space: pre-line;
+}
+
+.Header-expertise .markup strong {
+    white-space: nowrap;
+}
+
+.Header-social {
+    font-size: 2em;
+}
+
+.Header-social ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.Header-social ul li {
+    float: left;
+    margin-left: 0px;
+    padding-left: 0.8em;
+    list-style-type: none;
+}
+
+.Header-social ul li a {
+    color: var(--main-grey);
+}
+
+.Header-social ul li a:active {
+    color: var(--main-blue);
+}
+
+.Header-social ul li a:hover {
+    color: var(--main-blue);
+}
+
+.Header-social ul li:first-child {
+    padding-left: 0px;
+}
