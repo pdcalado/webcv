@@ -1,21 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Card, CardText, CardBody, CardTitle, Col, Row } from 'reactstrap';
 import PropTypes from 'prop-types';
 import { faUserTie } from '@fortawesome/free-solid-svg-icons';
+import { Element } from 'react-scroll';
 
 import './Intro.css';
 import { CreateMarkup, fancyTitle } from 'utils/Generic';
 import Timeline from 'components/intro/Timeline';
 
-const IntroColumn = (title, Comp, props) => {
+const sectionName = (item) => {
+    return item.toLowerCase().replace(' ', '');
+};
+
+const IntroColumn = (props) => {
+    const { title, icon, Comp, cprops } = props;
     return (
         <Col xs="12" lg="6" className="Intro-col">
-            <Card>
-                <CardBody>
-                    <CardTitle>{title}</CardTitle>
-                    <Comp {...props} />
-                </CardBody>
-            </Card>
+            <Fragment>
+                <Element name={sectionName(title)} />
+                <Card>
+                    <CardBody>
+                        <CardTitle>{fancyTitle(title, icon)}</CardTitle>
+                        <Comp {...cprops} />
+                    </CardBody>
+                </Card>
+            </Fragment>
         </Col>
     );
 };
@@ -34,11 +43,16 @@ class Intro extends Component {
 
         return (
             <Row>
-                {IntroColumn(fancyTitle(about.title, null), WhoAmI, {
-                    text: about.text
+                {IntroColumn({
+                    title: about.title,
+                    Comp: WhoAmI,
+                    cprops: { text: about.text }
                 })}
-                {IntroColumn(fancyTitle(career.title, faUserTie), Timeline, {
-                    stages: career.stages
+                {IntroColumn({
+                    title: career.title,
+                    icon: faUserTie,
+                    Comp: Timeline,
+                    cprops: { stages: career.stages }
                 })}
             </Row>
         );

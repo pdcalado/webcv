@@ -7,9 +7,9 @@ import './Scroller.css';
 
 const Scroller = () => {
     return (
-        <Container className="Scroller d-flex justify-content-center">
+        <div className="Scroller">
             <FontAwesomeIcon icon={scrollDownIcon} />
-        </Container>
+        </div>
     );
 };
 

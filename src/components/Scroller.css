@@ -17,6 +17,8 @@
 
 .Scroller {
     font-size: var(--scroller-size);
+    display: flex;
+    justify-content: center;
 }
 
 .Scroller:hover {

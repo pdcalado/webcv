@@ -6,7 +6,6 @@ import Scroller from 'components/Scroller';
 const Linker = ({ to }) => {
     return (
         <Link
-            className="test1"
             activeClass="active"
             to={to}
             spy={true}
