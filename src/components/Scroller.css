@@ -1,0 +1,28 @@
+:root {
+    --scroller-size: 2em;
+    --scroller-vert: 1em;
+}
+
+@keyframes slidein {
+    from {
+        padding-top: 0em;
+        opacity: 0;
+    }
+
+    to {
+        padding-top: var(--scroller-vert);
+        opacity: 1;
+    }
+}
+
+.Scroller {
+    font-size: var(--scroller-size);
+}
+
+.Scroller:hover {
+    overflow: visible;
+    max-height: var(--scroller-vert);
+    animation-duration: 1s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+}
