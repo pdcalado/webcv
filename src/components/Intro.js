@@ -12,7 +12,7 @@ const sectionName = (item) => {
     return item.toLowerCase().replace(' ', '');
 };
 
-const IntroColumn = (props) => {
+const introColumn = (props) => {
     const { title, icon, Comp, cprops } = props;
     return (
         <Col xs="12" lg="6" className="Intro-col">
@@ -43,12 +43,12 @@ class Intro extends Component {
 
         return (
             <Row>
-                {IntroColumn({
+                {introColumn({
                     title: about.title,
                     Comp: WhoAmI,
                     cprops: { text: about.text }
                 })}
-                {IntroColumn({
+                {introColumn({
                     title: career.title,
                     icon: faUserTie,
                     Comp: Timeline,
