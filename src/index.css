@@ -6,8 +6,9 @@ body {
 
 :root {
     --main-dark: #222;
-    --main-blue: #5096D8;
-    --main-grey: #7F8B94;
-    --main-wgrey: #D3D3D3;
-    --main-white: #FFFFFF;
+    --main-blue: #5096d8;
+    --main-grey: #7f8b94;
+    --main-wgrey: #d3d3d3;
+    --main-white: #ffffff;
+    --header-pad: 1.5em;
 }
