@@ -4,17 +4,13 @@
 }
 
 .Skills-col .card-title {
-    font-size: 2.0em;
+    font-size: 2em;
     font-weight: bold;
     text-align: center;
     color: var(--main-blue);
     display: flex;
     justify-content: center;
-    margin-top: 2.0em;
-}
-
-.Skills-sub {
-    height: 100vh;
+    margin-top: 2em;
 }
 
 .Skills-sub .card {
@@ -34,7 +30,7 @@
 .Skills-name {
     font-size: 0.9em;
     vertical-align: middle;
-    line-height: 1.0em;
+    line-height: 1em;
     white-space: nowrap;
     display: table-cell;
 }
