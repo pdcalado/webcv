@@ -1,0 +1,13 @@
+.App-topbar .navbar {
+    background-color: var(--main-dark);
+    width: 100%;
+    position: fixed;
+    top: 0; /* Stay on top */
+    transition: top 0.3s;
+    z-index: 5;
+}
+
+.App-topbar .navbar-toggler {
+    border: none;
+    outline: none;
+}

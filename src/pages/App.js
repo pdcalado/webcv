@@ -8,9 +8,24 @@ import Intro from 'components/Intro.js';
 import Skills from 'components/Skills.js';
 import Honors from 'components/Honors.js';
 import Contact from 'components/Contact.js';
+import TopBar from 'components/TopBar.js';
+import { headerPad } from 'style.js';
 import './App.css';
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+
+        this.onTop = this.onTop.bind(this);
+        this.state = { pt: headerPad };
+    }
+
+    onTop(top) {
+        this.setState({
+            pt: top ? '4.0em' : headerPad
+        });
+    }
+
     render() {
         const {
             owner,
@@ -21,11 +36,19 @@ class App extends Component {
             contact
         } = this.props.data;
 
+        const onTop = this.onTop;
+
         document.title = owner.name + ' Web CV';
 
         return (
             <div>
-                <div className="App-header">
+                <div className="App-topbar">
+                    <TopBar onTop={onTop} />
+                </div>
+                <div
+                    style={{ paddingTop: this.state.pt }}
+                    className="App-header"
+                >
                     <Header owner={owner} />
                 </div>
                 <Element name="intro" className="element" />
