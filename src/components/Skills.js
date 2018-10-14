@@ -58,36 +58,19 @@ class Skills extends Component {
     render() {
         const { skills } = this.props;
 
+        const list = ['programming', 'tools', 'languages'].map((key) => {
+            return (
+                <Col key={key} lg="4" xs="12" className="Skills-sub mt-2">
+                    {skillCard(skills[key])}
+                </Col>
+            );
+        });
+
         return (
             <div className="Skills-col">
                 <Card>
                     <CardBody>
-                        <Row>
-                            <Col
-                                lg="4"
-                                xs="12"
-                                className="Skills-sub mt-2"
-                                id="programming"
-                            >
-                                {skillCard(skills.programming)}
-                            </Col>
-                            <Col
-                                lg="4"
-                                xs="12"
-                                className="Skills-sub mt-2"
-                                id="tools"
-                            >
-                                {skillCard(skills.tools)}
-                            </Col>
-                            <Col
-                                lg="4"
-                                xs="12"
-                                className="Skills-sub mt-2"
-                                id="languages"
-                            >
-                                {skillCard(skills.languages)}
-                            </Col>
-                        </Row>
+                        <Row>{list}</Row>
                     </CardBody>
                 </Card>
             </div>

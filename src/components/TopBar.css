@@ -16,3 +16,11 @@
     border: none;
     outline: none;
 }
+
+.App-topbar .nav .nav-item a {
+    color: var(--main-blue);
+}
+
+.App-topbar .nav .nav-item a:active {
+    color: var(--main-blue);
+}

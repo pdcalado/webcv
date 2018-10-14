@@ -13,7 +13,11 @@ import './TopBar.css';
 
 const linkList = (links, setActive) => {
     return links.map((item, index) => {
-        const block = item.sm ? 'd-block d-md-none' : 'd-block';
+        const block = item.mdOnly
+            ? 'd-block d-md-none'
+            : item.lgOnly
+                ? 'd-md-block d-none'
+                : 'd-block';
         const isActive = false; // item.active
 
         return (
@@ -104,7 +108,14 @@ export default class TopBar extends Component {
             {
                 tag: '#intro',
                 text: 'Intro',
-                active: this.state.activeIndex === '#intro'
+                active: this.state.activeIndex === '#intro',
+                lgOnly: true
+            },
+            {
+                tag: '#whoami',
+                text: 'Who am I?',
+                active: this.state.activeIndex === '#whoami',
+                mdOnly: true
             },
             {
                 tag: '#career',
@@ -115,7 +126,14 @@ export default class TopBar extends Component {
             {
                 tag: '#skills',
                 text: 'Skills',
-                active: this.state.activeIndex === '#skills'
+                active: this.state.activeIndex === '#skills',
+                lgOnly: true
+            },
+            {
+                tag: '#programming',
+                text: 'Programming',
+                active: this.state.activeIndex === '#programming',
+                mdOnly: true
             },
             {
                 tag: '#tools',
