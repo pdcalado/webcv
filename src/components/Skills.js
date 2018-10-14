@@ -63,13 +63,28 @@ class Skills extends Component {
                 <Card>
                     <CardBody>
                         <Row>
-                            <Col lg="4" xs="12" className="Skills-sub mt-2">
+                            <Col
+                                lg="4"
+                                xs="12"
+                                className="Skills-sub mt-2"
+                                id="programming"
+                            >
                                 {skillCard(skills.programming)}
                             </Col>
-                            <Col lg="4" xs="12" className="Skills-sub mt-2">
+                            <Col
+                                lg="4"
+                                xs="12"
+                                className="Skills-sub mt-2"
+                                id="tools"
+                            >
                                 {skillCard(skills.tools)}
                             </Col>
-                            <Col lg="4" xs="12" className="Skills-sub mt-2">
+                            <Col
+                                lg="4"
+                                xs="12"
+                                className="Skills-sub mt-2"
+                                id="languages"
+                            >
                                 {skillCard(skills.languages)}
                             </Col>
                         </Row>

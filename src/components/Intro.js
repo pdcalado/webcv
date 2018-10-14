@@ -2,22 +2,16 @@ import React, { Component, Fragment } from 'react';
 import { Card, CardText, CardBody, CardTitle, Col, Row } from 'reactstrap';
 import PropTypes from 'prop-types';
 import { faUserTie } from '@fortawesome/free-solid-svg-icons';
-import { Element } from 'react-scroll';
 
 import './Intro.css';
 import { CreateMarkup, fancyTitle } from 'utils/Generic';
 import Timeline from 'components/intro/Timeline';
 
-const sectionName = (item) => {
-    return item.toLowerCase().replace(' ', '');
-};
-
 const introColumn = (props) => {
-    const { title, icon, Comp, cprops } = props;
+    const { title, icon, id, Comp, cprops } = props;
     return (
-        <Col xs="12" lg="6" className="Intro-col">
+        <Col xs="12" lg="6" className="Intro-col" id={id}>
             <Fragment>
-                <Element name={sectionName(title)} />
                 <Card>
                     <CardBody>
                         <CardTitle>{fancyTitle(title, icon)}</CardTitle>
@@ -46,11 +40,13 @@ class Intro extends Component {
                 {introColumn({
                     title: about.title,
                     Comp: WhoAmI,
+                    id: 'whoami',
                     cprops: { text: about.text }
                 })}
                 {introColumn({
                     title: career.title,
                     icon: faUserTie,
+                    id: 'career',
                     Comp: Timeline,
                     cprops: { stages: career.stages }
                 })}

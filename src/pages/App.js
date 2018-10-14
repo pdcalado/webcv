@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 import PropTypes from 'prop-types';
-import { Element } from 'react-scroll';
 
 import Header from 'components/Header.js';
 import Intro from 'components/Intro.js';
@@ -41,7 +40,7 @@ class App extends Component {
         document.title = owner.name + ' Web CV';
 
         return (
-            <div>
+            <div data-spy="scroll" data-target="#main-nav" data-offset="0">
                 <div className="App-topbar">
                     <TopBar onTop={onTop} />
                 </div>
@@ -51,20 +50,16 @@ class App extends Component {
                 >
                     <Header owner={owner} />
                 </div>
-                <Element name="intro" className="element" />
-                <Container className="App-intro mt-xs-0 mt-sm-4">
+                <Container id="intro" className="App-intro mt-xs-0 mt-sm-4">
                     <Intro about={about} career={career} />
                 </Container>
-                <div className="App-skills">
-                    <Element name="skills" className="element" />
+                <div id="skills" className="App-skills">
                     <Skills skills={skills} />
                 </div>
-                <div className="App-honors">
-                    <Element name="honors" className="element" />
+                <div id="honors" className="App-honors">
                     <Honors honors={honors} />
                 </div>
                 <div className="App-contact">
-                    <Element name="contact" className="element" />
                     <Contact contact={contact} />
                 </div>
             </div>
