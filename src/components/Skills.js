@@ -60,7 +60,13 @@ class Skills extends Component {
 
         const list = ['programming', 'tools', 'languages'].map((key) => {
             return (
-                <Col key={key} lg="4" xs="12" className="Skills-sub mt-2">
+                <Col
+                    key={key}
+                    lg="4"
+                    xs="12"
+                    id={key}
+                    className="Skills-sub mt-2"
+                >
                     {skillCard(skills[key])}
                 </Col>
             );

@@ -11,14 +11,14 @@ import {
 
 import './TopBar.css';
 
-const linkList = (links, setActive) => {
+const linkList = (links, setActive, activeIndex) => {
     return links.map((item, index) => {
         const block = item.mdOnly
             ? 'd-block d-md-none'
             : item.lgOnly
                 ? 'd-md-block d-none'
                 : 'd-block';
-        const isActive = false; // item.active
+        const isActive = false; // item.tag === activeIndex
 
         return (
             <NavItem key={index} className={block}>
@@ -103,54 +103,47 @@ export default class TopBar extends Component {
 
     render() {
         const style = { top: this.state.show ? '0' : '-100px' };
+        const activeIndex = this.state.activeIndex;
 
         const links = [
             {
                 tag: '#intro',
                 text: 'Intro',
-                active: this.state.activeIndex === '#intro',
                 lgOnly: true
             },
             {
                 tag: '#whoami',
                 text: 'Who am I?',
-                active: this.state.activeIndex === '#whoami',
                 mdOnly: true
             },
             {
                 tag: '#career',
                 text: 'Career',
-                active: this.state.activeIndex === '#career',
                 mdOnly: true
             },
             {
                 tag: '#skills',
                 text: 'Skills',
-                active: this.state.activeIndex === '#skills',
                 lgOnly: true
             },
             {
                 tag: '#programming',
                 text: 'Programming',
-                active: this.state.activeIndex === '#programming',
                 mdOnly: true
             },
             {
                 tag: '#tools',
                 text: 'Tools',
-                active: this.state.activeIndex === '#tools',
                 mdOnly: true
             },
             {
                 tag: '#languages',
                 text: 'Languages',
-                active: this.state.activeIndex === '#languages',
                 mdOnly: true
             },
             {
                 tag: '#honors',
-                text: 'Honors',
-                active: this.state.activeIndex === '#honors'
+                text: 'Honors'
             }
         ];
 
@@ -162,7 +155,7 @@ export default class TopBar extends Component {
                 <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
                 <Collapse isOpen={!this.state.collapsed} navbar>
                     <Nav vertical pills>
-                        {linkList(links, this.setActive)}
+                        {linkList(links, this.setActive, activeIndex)}
                     </Nav>
                 </Collapse>
             </Navbar>
