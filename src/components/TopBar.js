@@ -10,6 +10,7 @@ import {
 } from 'reactstrap';
 
 import './TopBar.css';
+import { NOT_SHOW, isTop, reduce, stateToNav } from './topbar/NavState.js';
 
 const linkList = (links, setActive, activeIndex) => {
     return links.map((item, index) => {
@@ -37,8 +38,7 @@ const linkList = (links, setActive, activeIndex) => {
 };
 
 const initial = {
-    collapsed: true,
-    show: false,
+    condition: NOT_SHOW,
     activeIndex: 'home'
 };
 
@@ -51,7 +51,6 @@ export default class TopBar extends Component {
         this.handleScroll = this.handleScroll.bind(this);
         this.state = initial;
         this.lastY = 0;
-        this.isOnTop = false;
     }
 
     componentDidMount() {
@@ -65,44 +64,40 @@ export default class TopBar extends Component {
     handleScroll() {
         const currY = window.scrollY;
 
-        if (currY > this.lastY && this.state.show) {
-            this.setState({
-                show: false,
-                collapsed: true
-            });
-        }
+        const actions = {
+            scrollDown: currY > this.lastY,
+            scrollUp: currY < this.lastY,
+            yZero: currY === 0
+        };
 
-        if (currY < this.lastY && !this.state.show)
-            this.setState({ show: true });
-
-        if (currY === 0 && this.state.show && !this.isOnTop) {
-            this.isOnTop = true;
-            this.props.onTop(true);
-        }
-
-        if (currY !== 0 && this.isOnTop) {
-            this.isOnTop = false;
-            this.props.onTop(false);
-        }
+        const condition = reduce(this.state.condition, actions);
 
         this.lastY = currY;
+
+        if (condition === this.state.condition) return;
+
+        const topChange = isTop(condition) || isTop(this.state.condition);
+        if (topChange) this.props.onTop(isTop(condition));
+
+        this.setState({ condition });
     }
 
     toggleNavbar() {
-        this.setState({
-            collapsed: !this.state.collapsed
-        });
+        const condition = reduce(this.state.condition, { toggle: true });
+        if (condition !== this.state.condition) this.setState({ condition });
     }
 
     setActive(index) {
         this.setState({
-            collapsed: true,
+            condition: NOT_SHOW,
             activeIndex: index
         });
     }
 
     render() {
-        const style = { top: this.state.show ? '0' : '-100px' };
+        const { show, collapsed } = stateToNav(this.state.condition);
+
+        const style = { top: show ? '0' : '-100px' };
         const activeIndex = this.state.activeIndex;
 
         const links = [
@@ -153,7 +148,7 @@ export default class TopBar extends Component {
                     <img src="icon-192.png" alt="Home" />
                 </NavbarBrand>
                 <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-                <Collapse isOpen={!this.state.collapsed} navbar>
+                <Collapse isOpen={!collapsed} navbar>
                     <Nav vertical pills>
                         {linkList(links, this.setActive, activeIndex)}
                     </Nav>
