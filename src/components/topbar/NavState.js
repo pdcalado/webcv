@@ -1,15 +1,15 @@
-export const SHOW_COL = 'show_col';
-export const SHOW_UNC = 'show_unc';
-export const NOT_SHOW = 'not_show';
-export const TOP_COL = 'top_col';
-export const TOP_UNC = 'top_unc';
+export const SHOW_COL = 'showCol';
+export const SHOW_UNC = 'showUnc';
+export const NOT_SHOW = 'notShow';
+export const TOP_COL = 'topCol';
+export const TOP_UNC = 'topUnc';
 
 const snMap = {
-    show_col: { show: true, collapsed: true },
-    show_unc: { show: true, collapsed: false },
-    not_show: { show: false, collapsed: true },
-    top_col: { show: true, collapsed: true },
-    top_unc: { show: true, collapsed: false }
+    showCol: { show: true, collapsed: true },
+    showUnc: { show: true, collapsed: false },
+    notShow: { show: false, collapsed: true },
+    topCol: { show: true, collapsed: true },
+    topUnc: { show: true, collapsed: false }
 };
 
 export const isTop = (condition) => {
@@ -17,7 +17,7 @@ export const isTop = (condition) => {
 };
 
 const funReduce = {
-    show_col: (actions) => {
+    showCol: (actions) => {
         if (actions.toggle) {
             return SHOW_UNC;
         }
@@ -29,7 +29,7 @@ const funReduce = {
         }
         return SHOW_COL;
     },
-    show_unc: (actions) => {
+    showUnc: (actions) => {
         if (actions.toggle || actions.scrollDown) {
             return SHOW_COL;
         }
@@ -38,13 +38,13 @@ const funReduce = {
         }
         return SHOW_UNC;
     },
-    not_show: (actions) => {
+    notShow: (actions) => {
         if (actions.scrollUp) {
             return SHOW_COL;
         }
         return NOT_SHOW;
     },
-    top_col: (actions) => {
+    topCol: (actions) => {
         if (actions.toggle) {
             return TOP_UNC;
         }
@@ -53,7 +53,7 @@ const funReduce = {
         }
         return TOP_COL;
     },
-    top_unc: (actions) => {
+    topUnc: (actions) => {
         if (actions.toggle) {
             return TOP_COL;
         }
