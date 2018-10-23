@@ -74,17 +74,23 @@ export default class TopBar extends Component {
 
         this.lastY = currY;
 
-        if (condition === this.state.condition) return;
+        if (condition === this.state.condition) {
+            return;
+        }
 
         const topChange = isTop(condition) || isTop(this.state.condition);
-        if (topChange) this.props.onTop(isTop(condition));
+        if (topChange) {
+            this.props.onTop(isTop(condition));
+        }
 
         this.setState({ condition });
     }
 
     toggleNavbar() {
         const condition = reduce(this.state.condition, { toggle: true });
-        if (condition !== this.state.condition) this.setState({ condition });
+        if (condition !== this.state.condition) {
+            this.setState({ condition });
+        }
     }
 
     setActive(index) {
