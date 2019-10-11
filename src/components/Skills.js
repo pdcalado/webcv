@@ -27,9 +27,11 @@ const skillRow = (key, obj) => {
     const pbstyle = { backgroundColor: colorLighter };
 
     return (
-        <Row key={key} className="Skills-row mb-2">
-            <Col xs="6">{name(obj)}</Col>
-            <Col xs="6">
+        <Row key={key} className="mb-2">
+            <Col xs="6" className="Skillrow-half">
+                {name(obj)}
+            </Col>
+            <Col xs="6" className="Skillrow-half">
                 <Progress striped style={pbstyle} value={obj.value} />
             </Col>
         </Row>
