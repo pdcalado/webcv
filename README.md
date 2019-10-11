@@ -27,4 +27,4 @@ File structure is inspired by [Fractal](https://hackernoon.com/fractal-a-react-a
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2018, Pedro Calado
+Copyright (c) 2019, Pedro Calado
