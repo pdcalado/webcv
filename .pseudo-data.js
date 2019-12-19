@@ -84,7 +84,8 @@ export default {
 		    value: 40,
 		    date: "2018-01"
 		}
-	    ]
+	    ],
+          description: "The programming languages I've learned"
 	},
 	tools: {
 	    title: "Tools Proficiency",
@@ -114,7 +115,8 @@ export default {
 		    value: 60,
 		    date: "2017-01"
 		}
-	    ]
+	    ],
+          description: "The tools I've learned"
 	},
 	languages: {
 	    title: "Languages Spoken",
@@ -131,7 +133,8 @@ export default {
 		    name: "Japanese",
 		    value: 50
 		}
-	    ]
+	    ],
+            description: "The languages I've learned"
 	}
     },
     contact: {
